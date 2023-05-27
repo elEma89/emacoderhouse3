@@ -1,0 +1,236 @@
+@import "./media-queries";
+
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Poppins:wght@100;400&display=swap');
+
+/* font-family: 'Instrument Serif', serif;
+font-family: 'Poppins', sans-serif; */
+
+//variables
+$color-principal:#303030;
+$color-fondo: rgb(25, 25, 25);
+$color-hover: darkslateblue;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: $color-fondo;
+}
+
+header{
+    background-color: $color-fondo;
+    display: flex; /* siempre aplicar esto a los contenedores */
+    justify-content: space-between;
+    padding: 20px;
+
+    li{
+        list-style: none;
+        display: inline-block; /* ubica una al lado del otro y conserva altura */
+        padding: 10px;
+        margin-right: 10px;
+    }
+
+    a{
+        text-decoration: none;
+        color: #fff;
+    }
+
+    a:hover{
+        transform: scale(1.09);
+        color: $color-hover;
+    }
+
+    @include mobile {
+        padding: 8px;
+        margin-right: 5px;
+
+        li {
+            padding: 8px;
+            margin-right: 5px;
+        }
+    }
+}
+
+.logo{
+    color: #ffffff;
+    font-size: 25px;
+
+    @include mobile {
+        a span {
+            display: none;
+        }
+    }
+}
+
+.seleccion{
+    color: rgb(255, 251, 0);
+    text-decoration: none;
+}
+
+section{
+    width: 100%;
+    height: auto;
+    background-color:rgb(25, 25, 25);
+    display: flex;
+    justify-content: space-evenly;
+    padding: 30px;
+
+    div p{
+        padding: 20px;
+    }
+
+    @include tablet {
+        width: 100%;
+        height: auto;
+        padding: 0 30px 0 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    @include mobile {
+        width: 100%;
+        height: auto;
+        padding: 0 10px 0 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.card{
+    min-height: 350px;
+    width: 25%;
+    background-color: rgb(255, 166, 0);
+    border: 1px solid #5757573b;
+    text-align: center;
+
+    h3{
+        text-align: center;
+        font-size: 25px;
+        color: #fff;
+        text-shadow: 1px 1px 1px #000; // Esto le da sombra al texto
+    }
+
+    h4{
+        letter-spacing: 1px;
+    }
+
+    p{
+        text-align: justify;
+        padding: 20px;
+        font-size: 16px;
+    }
+
+    a{
+        font-size: 29px;
+        letter-spacing: 5px;
+        padding: 5px;
+    }
+
+    a i{
+        font-size: 28px;
+        color: #737373;
+    }
+
+    @include tablet {
+        min-height: 350px;
+        margin: 30px;
+        width: 70%;
+        text-align: center;
+    }
+
+    @include mobile {
+        min-height: 250px;
+        margin: 30px;
+        width: 60%;
+        text-align: center;
+    }
+}
+
+.card:hover{
+    transform: scale(1.03);
+    transition: all 0.1s;
+    box-shadow: 0 0 1px 0.1px #fff;
+
+    a:hover{
+        color: #373737;
+    }
+
+    a i:hover{
+        color: $color-hover;
+    }
+}
+
+.card-img{
+    height: 180px;
+    width: 100%;
+    background-color: #000;
+    background-image: url(../img/03-Noticias-60-minutos.jpg);
+    background-size: cover; /* Esto cubre todo el tamaño de la card */
+    background-position: center;
+}
+
+.card-imgB{
+    height: 180px;
+    width: 100%;
+    background-color: #000;
+    background-image: url(../img/2-estudio-abierto-75.jpg);
+    background-size: cover; /* Esto cubre todo el tamaño de la card */
+    background-position: center;
+}
+
+.card-imgC{
+    height: 180px;
+    width: 100%;
+    background-color: #000;
+    background-image: url(../img/el-desafio-de-la-tierra.jpg);
+    background-size: cover; //Esto cubre todo el tamaño de la card
+    background-position: center;
+}
+
+.card-imgD{
+    height: 180px;
+    width: 100%;
+    background-color: #000;
+    background-image: url(../img/las-dos-caras-del-amor.jpg);
+    background-size: cover; // Esto cubre todo el tamaño de la card
+    background-position: center;
+}
+
+.card-imgE{
+    height: 180px;
+    width: 100%;
+    background-color: #000;
+    background-image: url(../img/Mujer-policia.jpg);
+    background-size: cover; /* Esto cubre todo el tamaño de la card */
+    background-position: center;
+}
+
+.card-imgF{
+    height: 180px;
+    width: 100%;
+    background-color: #000;
+    background-image: url(../img/INFANTIL-1.jpg);
+    background-size: cover; /* Esto cubre todo el tamaño de la card */
+    background-position: center;
+}
+
+footer {
+    p{
+        margin: 20px;
+        color: #737373;
+    }
+
+    hr {
+        height: 1px;
+        width: 100%;
+        border-color: #737373;
+        display: flex;
+        justify-content: center;
+    }
+}
